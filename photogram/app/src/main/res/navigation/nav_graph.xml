@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/image_gallery_fragment">
+
+    <fragment
+        android:id="@+id/image_gallery_fragment"
+        android:label="Image Gallery"
+        android:name="edu.uw.zhzsimon.photogram.ImageGalleryFragment"
+        tools:layout="@layout/fragment_image_gallery"
+        >
+
+        <action
+            android:id="@+id/action_to_upload_fragment"
+            app:destination="@id/upload_fragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/upload_fragment"
+        android:label="Upload Page"
+        android:name="edu.uw.zhzsimon.photogram.UploadFragment"
+        tools:layout="@layout/fragment_upload"
+        >
+
+        <action
+            android:id="@+id/action_to_image_gallery_fragment"
+            app:destination="@+id/image_gallery_fragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/setting_fragment"
+        android:name="edu.uw.zhzsimon.photogram.SettingFragment"
+        android:label="Setting"
+        tools:layout="@layout/fragment_setting" />
+
+</navigation>
